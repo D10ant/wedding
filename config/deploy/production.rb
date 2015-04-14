@@ -1,3 +1,9 @@
+server '173.236.253.163', user: 'dhc-user', roles: %w{web}, ssh_options: {
+  port:22,
+  keys: %w(id_rsa),
+  forward_agent: true,
+}
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
