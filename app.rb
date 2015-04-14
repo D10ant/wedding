@@ -17,7 +17,7 @@ def code_lookup(code)
   return invitees.fetch(code.to_i)['name']
 end
 
-get '/wedding/:name' do
+get '/:name' do
   invitee = code_lookup(params[:name])
   haml :index, :locals => {:invitee => invitee}
 end
