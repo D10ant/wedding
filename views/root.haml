@@ -22,7 +22,7 @@
       %p
         If you have a code, please enter it here.
 
-      %form.form-inline{:onsubmit => "this.action='http://localhost:4567/'+this.code.value;"}
+      %form.form-inline{:onsubmit => "this.action=window.location.href+this.code.value;"}
         %div.form-group
           %input.form-control#code{:type => 'text', :placeholder => 'Enter Code'}
 
