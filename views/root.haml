@@ -1,0 +1,29 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+
+    %title The Wedding of Jen & Ryan
+
+    %link{:href => "/css/cerulean.min.css", :rel => "stylesheet"}
+
+  %body
+
+    %nav.navbar.navbar-default.navbar-fixed-top
+      %div.container-fluid
+        %div.navbar-header
+          %a.navbar-brand{:href => "#"}
+            The Wedding of Jen & Ryan
+
+    %div.container-fluid
+
+      %p
+        If you have a code, please enter it here.
+
+      %form.form-inline{:onsubmit => "this.action='http://localhost:4567/'+this.code.value;"}
+        %div.form-group
+          %input.form-control#code{:type => 'text', :placeholder => 'Enter Code'}
+
+        %button.btn.btn-primary{:type => 'submit'} Submit

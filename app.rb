@@ -21,3 +21,7 @@ get '/:name' do
   invitee = code_lookup(params[:name])
   haml :index, :locals => {:invitee => invitee}
 end
+
+get '/' do
+  haml :root
+end
