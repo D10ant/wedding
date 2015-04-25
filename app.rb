@@ -14,12 +14,12 @@ end
 #Lookup invitee name based on code
 def code_lookup(code)
   invitees = YamlImport('invitees.yml')
-  return invitees.fetch(code.to_i)['name']
+  return invitees.fetch(code.upcase)['name']
 end
 
 get '/:name' do
   invitee = code_lookup(params[:name])
-  haml :index, :locals => {:invitee => invitee}
+  haml :index_new, :locals => {:invitee => invitee}
 end
 
 get '/' do
