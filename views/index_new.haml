@@ -19,6 +19,22 @@
             Jen and Ryan's Wedding
 
     %div.container-fluid
+
+      %p
+        Welcome
+        -if invitee.count == 2
+          -invitee.each_with_index do |i, x|
+            = "#{i[0]} and" if x==0
+            = "#{i[0]}," if x!=0
+        -elsif invitee.count == 4
+          -invitee.each_with_index do |i, x|
+            = "#{i[0]}," if x < 3
+            = "and #{i[0]}," if x == 3
+        -else
+          ="#{invitee.first[0]}, "
+
+        please see below for details about our wedding - please be sure to RSVP at the bottom of the page.
+
       %h3 Where?
 
       %p
@@ -27,7 +43,7 @@
         London
 
       %div.google-maps
-        %iframe{:frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed/v1/place?q=Kew%20Gardens%2C%20Richmond%2C%20United%20Kingdom&key=AIzaSyCpHdELUBeB6GTEXyWNNFDqUzsmj7rqnYg", :style => "border:0", :width => "600"}
+        %iframe{:frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed/v1/place?q=Cambridge%20Cottage%2C%20Kew%20Gardens%2C%20Richmond%2C%20United%20Kingdom&key=AIzaSyCpHdELUBeB6GTEXyWNNFDqUzsmj7rqnYg", :style => "border:0", :width => "100%"}
 
       %p
         Regrettably, our venue is not suitable for young children. If you need
@@ -59,7 +75,7 @@
         entrance. However, please leave at least 20 minutes walking time if you
         do choose to enter through the main gate.
 
-      %h3 Public Transport:
+      %h3 Public Transport
 
 
       %img{:src => "/images/kew_transport.png", :class => "img-responsive"}
@@ -194,15 +210,15 @@
         %br
         %a{:href => "http://www.petershamhotel.co.uk/"}http://www.petershamhotel.co.uk/
 
-      %h3 Gifts:
+      %h3 Gifts
 
       %p
-        We are going on honeymoon straight after our wedding to Sri Lanka. If
-        you would like to contribute to our dream honeymoon, please do so via:
-
-      %p
-        Options are also available for John Lewis gift vouchers, but travelling
-        the world is what we love best!
+      We are going on honeymoon straight after our wedding to Sri Lanka. If you
+      would like to contribute to our dream honeymoon, please do so via our John
+      Lewis gift list
+      %a{:href => "https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/BuyGifts/GuestFindAList.jsp"}here.
+      Our code is 636657 and can be used online and in store
+      from 20th June 2015.
 
       %h3 RSVP
 
