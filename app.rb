@@ -24,6 +24,7 @@ get '/:name' do
     haml :index_new, :locals => {:invitee => invitee}
   else
     redirect 'PLACE_HOLDER'
+  end
 end
 
 get '/' do
