@@ -18,12 +18,12 @@ def code_lookup(code)
 end
 
 get '/:name' do
-  unless params[:name].upcase == 'PIC'
+  pictures = 'CODE'
+  unless params[:name].upcase == pictures
     invitee = code_lookup(params[:name])
     haml :index_new, :locals => {:invitee => invitee}
   else
-    redirect 'https://drive.google.com/folderview?id=0ByYtaxSgj51BfmN0cnFoS09YOTFRbnZfU0pIbUZPcHBQVWFSdXhwYmFrYWxGM2h4VUEySUE&usp=sharing'
-  end
+    redirect 'PLACE_HOLDER'
 end
 
 get '/' do
